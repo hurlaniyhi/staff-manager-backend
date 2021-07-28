@@ -1,2 +1,2 @@
-# Analytics-App
-Backend for analytics app registration and login
+# Staff manager app
+Backend for staff manager app
