@@ -37,7 +37,7 @@ router.post('/dp', async(req,res) => {
             return res.send({message:"there is error", info: err})
         }
         console.log("file uploaded to server")
-        //console.log(req.file)
+        console.log(req.file)
         try{
             cloudinary.config({
                 cloud_name: cloudName,
@@ -86,6 +86,7 @@ router.post('/dp', async(req,res) => {
             )
         }
         catch(err){
+            console.log(err)
             return res.send({message: "error occured", info: err})
         }
 

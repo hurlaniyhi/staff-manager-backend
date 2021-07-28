@@ -10,7 +10,6 @@ const router = express.Router();
 router.use(requireAuth)
 
 
-
 router.post('/directMail', async(req,res) => {
     const {subject, content, userType} = req.body
 
@@ -115,6 +114,18 @@ router.post('/personalMail', async(req,res) => {
                 return res.send({message: "success"})
             } 
         })
+})
+
+router.post("/lakadir", (req,res) => {
+    console.log("enter")
+    if(req.body.name){
+        res.send({message: "success"})
+    }
+    else{
+        
+        res.send({message: "provide name"})
+    }
+   
 })
 
 
